@@ -1,6 +1,7 @@
 import React from 'react'
 import { Text, View } from "react-native";
 import { StyleSheet } from "react-native";
+import { ACCENT_COLOR, MAIN_COLOR, SECONDARY_COLOR } from "../styles/theme";
 
 export default function Footer() {
   return (
@@ -12,15 +13,13 @@ export default function Footer() {
 
 const component = StyleSheet.create({
 	footer: {
-		backgroundColor: "#0f2052",
+		backgroundColor: MAIN_COLOR,
 		flexDirection: "row",
-		position: "absolute",
-		bottom: 0,
-		borderTopColor: "#FAFBFF",
+		borderTopColor: SECONDARY_COLOR,
 		borderTopWidth: 1,
 	},
 	title: {
-		color: "#FAFBFF",
+		color: SECONDARY_COLOR,
 		fontWeight: "bold",
 		flex: 1,
 		margin: 8,

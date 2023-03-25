@@ -1,34 +1,31 @@
 import { useState, useContext } from "react";
-import { Text, View, TextInput, Pressable, Keyboard } from "react-native";
-import styles, { ACCENT_COLOR, MAIN_COLOR } from "../styles/styles";
-import { AppContext } from "./AppContext";
+import { Text, TextInput, Keyboard, StyleSheet } from "react-native";
+import theme from "../styles/theme";
+import CustomButton from "./CustomButton";
+
+import { GameContext } from "./GameContextWrapper";
 
 
-export default function HomeScreenInput() {
-	const [inputFocus, setInputFocus] = useState(true);
+export default function HomeScreenInput({ setShowRules }) {
 	const [inputValue, setInputValue] = useState("");
-	const { username, setUsername } = useContext(AppContext);
-	
+	const { setUsername } = useContext(GameContext);
+
 	const saveUsername = () => {
 		setUsername(inputValue);
+		setShowRules(true);
 		Keyboard.dismiss();
 	};
 
 	return (
 		<>
-			<Text style={styles.title}>Enter your name:</Text>
+			<Text style={theme.title}>Enter your name:</Text>
 			<TextInput
-				style={styles.inputField}
+				style={theme.inputField}
 				keyboardType="default"
 				onChangeText={setInputValue}
-				autoFocus={inputFocus}
+				autoFocus={true}
 			/>
-			<Pressable
-				onPress={saveUsername}
-				style={({ pressed }) => [styles.button, { opacity: pressed ? 0.4 : 1.0 }]}
-			>
-				<Text style={styles.buttonText}>Submit</Text>
-			</Pressable>
+			<CustomButton text={"Submit"} action={saveUsername}/>
 		</>
 	);
 }

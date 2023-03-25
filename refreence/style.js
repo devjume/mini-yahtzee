@@ -24,6 +24,11 @@ export default StyleSheet.create({
     textAlign: 'center',
     margin: 10,
   },
+  text: {
+    color: '#fff',
+    fontSize: 18,
+    textAlign: 'center',
+  },
   author: {
     color: '#fff',
     fontWeight: 'bold',

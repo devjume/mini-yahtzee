@@ -1,7 +1,7 @@
 import React from 'react'
 import { Text, View } from "react-native";
 import { StyleSheet } from "react-native";
-import styles from "../styles/styles"
+import { ACCENT_COLOR, MAIN_COLOR, SECONDARY_COLOR } from "../styles/theme";
 
 export default function Header() {
   return (
@@ -13,16 +13,15 @@ export default function Header() {
 
 const component = StyleSheet.create({
 	header: {
-		marginBottom: 15,
-		backgroundColor: "#0f2052",
+		backgroundColor: MAIN_COLOR,
 		flexDirection: "row",
-		borderTopColor: "#FAFBFF",
-		borderBottomColor: "#FAFBFF",
-    borderTopWidth: 1,
-    borderBottomWidth: 1,
+		borderTopColor: SECONDARY_COLOR,
+		borderBottomColor: SECONDARY_COLOR,
+		borderTopWidth: 1,
+		borderBottomWidth: 1,
 	},
 	title: {
-		color: "#FAFBFF",
+		color: SECONDARY_COLOR,
 		fontWeight: "bold",
 		flex: 1,
 		fontSize: 24,

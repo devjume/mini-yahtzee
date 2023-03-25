@@ -6,22 +6,35 @@ export const SECONDARY_COLOR = "#E5ECFF"
 export const ACCENT_COLOR = "#071127"
 
 export default StyleSheet.create({
-	container: {
+	screenContainer: {
 		flex: 1,
 		backgroundColor: MAIN_COLOR,
+		color: SECONDARY_COLOR,
+		alignItems: "stretch",
+		justifyContent: "space-between",
+	},
+
+	contentContainer: {
+		flex: 1,
 		alignItems: "center",
 		justifyContent: "flex-start",
-		color: SECONDARY_COLOR,
+		paddingHorizontal: 6,
+		paddingTop: 6,
 	},
+
 	title: {
 		color: SECONDARY_COLOR,
 		fontSize: 18,
-		fontWeight: "bold"
+		fontWeight: "bold",
 	},
+
 	text: {
 		color: SECONDARY_COLOR,
 		fontSize: 16,
+		textAlign: "center",
+		marginHorizontal: 8,
 	},
+
 	inputField: {
 		borderWidth: 1,
 		borderColor: SECONDARY_COLOR,
@@ -33,23 +46,4 @@ export default StyleSheet.create({
 		width: "80%",
 		marginVertical: 16,
 	},
-
-	button: {
-		backgroundColor: ACCENT_COLOR,
-		borderRadius: 4,
-		paddingVertical: 14,
-		paddingHorizontal: 34,
-		alignItems: "center",
-		justifyContent: "center",
-		borderWidth: 1,
-		borderColor: SECONDARY_COLOR,
-	},
-
-	buttonText: {
-		color: SECONDARY_COLOR,
-		fontWeight: "bold",
-		fontSize: 24,
-		lineHeight: 32,
-		letterSpacing: 0.50,
-	}
 });
