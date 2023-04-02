@@ -3,19 +3,18 @@ import { useState, createContext } from "react";
 export const GameContext = createContext(null);
 
 export default function GameContextWrapper({children}) {
-	
-  const [username, setUsername] = useState(null);
-  const [showTabBar, setShowTabBar] = useState("none");
-  const [throwCounter, setThrowCounter] = useState(0);
-  const [totalPoints, setTotalPoints] = useState(0);
-  const numberOfDices = 5;
-  const numberOfThrows = 3;
-  const minSpot = 1;
-  const maxSpot = 6;
-  const bonusPointLimit = 63;
-  const bonusPoints = 50;
+	const numberOfDices = 5;
+	const numberOfThrows = 3;
+	const minSpot = 1;
+	const maxSpot = 6;
+	const bonusPointLimit = 63;
+	const bonusPoints = 50;
+	const STORAGE_KEY = "@scoreboard";
 
-  return (
+	const [username, setUsername] = useState(null);
+	const [showTabBar, setShowTabBar] = useState("none");
+	
+	return (
 		<GameContext.Provider
 			value={{
 				username,
@@ -23,14 +22,12 @@ export default function GameContextWrapper({children}) {
 				showTabBar,
 				setShowTabBar,
 				numberOfDices,
-				throwCounter,
-        totalPoints,
-				setThrowCounter,
 				numberOfThrows,
 				minSpot,
 				maxSpot,
 				bonusPointLimit,
-        bonusPoints
+				bonusPoints,
+				STORAGE_KEY,
 			}}
 		>
 			{children}

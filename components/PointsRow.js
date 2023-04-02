@@ -3,18 +3,16 @@ import { View, Text, Pressable, StyleSheet } from "react-native";
 import { ACCENT_COLOR, SECONDARY_COLOR } from "../styles/theme";
 import { GameContext } from "./GameContextWrapper";
 
-export default function ScoreRow() {
+export default function PointsRow({points}) {
 
-	const { maxSpot, throwCounter } = useContext(GameContext);
-
-	const numberItems = Array.from({ length: maxSpot }, (_, index) => {
+	const numberItems = Object.entries(points).map(([key, value]) => {
 		return (
-			<View style={styles.childContainer} key={`numberItem${index}`}>
-				<Text style={styles.text}>0</Text>
-				<Text style={styles.rounded}>{index + 1}</Text>
+			<View style={styles.childContainer} key={`numberItem${key}`}>
+				<Text style={styles.text}>{value}</Text>
+				<Text style={styles.rounded}>{key}</Text>
 			</View>
 		);
-	});
+	})
 
 	return <View style={styles.container}>{numberItems}</View>;
 }

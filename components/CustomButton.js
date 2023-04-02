@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
 		justifyContent: "center",
 		borderWidth: 1,
 		borderColor: SECONDARY_COLOR,
+		marginVertical: 12,
 	},
 
 	text: {

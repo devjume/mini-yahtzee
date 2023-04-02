@@ -21,23 +21,16 @@ export default function HomeScreenRules({navigation}) {
 			<Text style={styles.title}>Rules of the game:</Text>
 			<Text style={styles.text}>
 				<Text style={styles.bold}>THE GAME: </Text>
-				{`Upper section of the classic Yahtzee dice game. You have ${numberOfDices} dices and for the
-				every dice you have ${numberOfThrows} throws. After each throw you can keep dices in order to
-				get same dice spot counts as many as possible. In the end of the turn you must select your
-				points from ${minSpot} to ${maxSpot}. Game ends when all points have been selected. The order
-				for selecting those is free.`}
+				{`Upper section of the classic Yahtzee dice game. You have ${numberOfDices} dices and for the every dice you have ${numberOfThrows} throws. After each throw you can keep dices in order to get same dice spot counts as many as possible. In the end of the turn you must select your points from ${minSpot} to ${maxSpot}. Game ends when all points have been selected. The order for selecting those is free.`}
 			</Text>
 			<Text style={styles.text}>
 				<Text style={styles.bold}>Points: </Text>{" "}
-				{`After each turn game calculates the sum for the
-				dices you selected. Only the dices having the same spot count are calculated. Inside the
-				game you can not select same points from ${minSpot} to ${maxSpot} again.`}
+				{`After each turn game calculates the sum for the dices you selected. Only the dices having the same spot count are calculated. Inside the game you can not select same points from ${minSpot} to ${maxSpot} again.`}
 			</Text>
 			<Text style={styles.text}>
 				<Text style={styles.bold}>GOAL: </Text>{" "}
 				{`To get points as much as possible.
-				${bonusPointLimit} points is the limit of getting bonus which gives you ${bonusPoints} points
-				more.`}
+				${bonusPointLimit} points is the limit of getting bonus which gives you ${bonusPoints} points more.`}
 			</Text>
 			<Text style={styles.title}>Good luck, {username}</Text>
 			<CustomButton text={"Play"} action={startGame} />

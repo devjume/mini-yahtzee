@@ -1,9 +1,11 @@
 import { StyleSheet } from "react-native";
 import Constants from "expo-constants";
 
-export const MAIN_COLOR = "#0f2052";
+export const MAIN_COLOR = "#0f2052"
 export const SECONDARY_COLOR = "#E5ECFF"
+export const SECONDARY_COLOR_DARK = "#898e99";
 export const ACCENT_COLOR = "#071127"
+
 
 export default StyleSheet.create({
 	screenContainer: {
