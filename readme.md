@@ -1,3 +1,10 @@
+```
+git clone https://github.com/devjume/mini-yahtzee.git
+npm install
+npm start
+```
+
+----
 https://huemint.com/website-1/#palette=fafbfc-412830-e13544
 
 #fafbfc white
